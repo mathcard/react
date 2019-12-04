@@ -1,0 +1,2 @@
+- Instalar a extensão React Navigation
+npm install react-navigation
