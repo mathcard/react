@@ -1,2 +1,10 @@
 - Instalar a extensão React Navigation
 npm install react-navigation
+
+- API
+https://rocketseat-node.herokuapp.com/api
+
+- Instalar a extensão Axios
+npm install axios
+
+Instalar extensões color picker e material theme
