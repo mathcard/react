@@ -7,6 +7,8 @@ export default class Main extends Component{
         title: "JS Hunt"
     };
 
+    //state = {}
+/*
     componentDidMount(){ // Disparado automaticamente
         this.loadProducts();        
     }
@@ -17,7 +19,7 @@ export default class Main extends Component{
         const { docs } = response.data;
         
         console.log(docs);
-    };
+    };*/
 
     render(){
         return(

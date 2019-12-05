@@ -1,7 +1,7 @@
-import React from 'react';
+import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View} from 'react-native';
 
-export default class App extends Comment{
+export default class App extends Component{
   render(){
     return(
       <View styles={styles.container}>
@@ -14,20 +14,20 @@ export default class App extends Comment{
 }
 
 const styles = StyleSheet.create({
-  container: {
+  container:{
     flex: 1,
-    justifyContent: 'center',
+    justifyContent: 'center',    
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
   },
-  welcome: {
-    fontSize: '20',
+  welcome:{
+    fontSize: 20,
     textAlign: 'center',
-    margin: 10,
+    margin: 10,    
   },
   box: {
     width: 60,
     height: 60,
-    backgroundColor: '#F00',
-  },
+    backgroundColor: "#F00",    
+  }
 });

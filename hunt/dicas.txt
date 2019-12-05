@@ -1,5 +1,4 @@
-- Instalar a extensão React Navigation
-npm install react-navigation
+Bundler renderiza o Java Script na tela
 
 - API
 https://rocketseat-node.herokuapp.com/api
@@ -8,3 +7,23 @@ https://rocketseat-node.herokuapp.com/api
 npm install axios
 
 Instalar extensões color picker e material theme
+
+
+- React Navigation Downoload
+npm install --save react-navigation
+npm install --save react-native-gesture-handler
+npm install --save react-navigation-stack
+
+- React Navigatio Import
+import {createAppContainer} from 'react-navigation'; // Esse não está funcionando
+import {createStackNavigator} from 'react-navigation-stack';
+
+
+- Criando Projeto
+react-native init (projeto)
+
+- Iniciando
+react-native run-(android||ios) --deviceId="nomeSimulador"
+
+- Reiniciando
+react-native start
