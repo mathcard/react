@@ -1,4 +1,4 @@
-Bundler renderiza o Java Script na tela
+﻿Bundler renderiza o Java Script na tela
 
 - API
 https://rocketseat-node.herokuapp.com/api
@@ -27,3 +27,9 @@ react-native run-(android||ios) --deviceId="nomeSimulador"
 
 - Reiniciando
 react-native start
+
+- Instalando React-Native
+npm install -g react-native-cli
+
+- Erro ao executar o react-native run-android
+npm install react-native-router-flux package
