@@ -1,9 +1,11 @@
-import {createAppContainer} from 'react-navigation';
-import {createStackNavigator} from 'react-navigation-stack';
-
+import { createStackNavigator, createAppContainer } from 'react-navigation';
 import Main from './pages/main';
 
-export default createStackNavigator({
+//import {createAppContainer} from 'react-navigation';
+//import {createStackNavigator} from 'react-navigation-stack';
+//export default createStackNavigator({
+    
+export default createAppContainer({
     Main
 }, {
     navigationOptions: {

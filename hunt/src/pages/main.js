@@ -24,7 +24,7 @@ export default class Main extends Component{
     render(){
         return(
             <View>
-                <Text> Página Main</Text>
+                <Text> Página Main Math</Text>
             </View>
         );
     }

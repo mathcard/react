@@ -33,3 +33,6 @@ npm install -g react-native-cli
 
 - Erro ao executar o react-native run-android
 npm install react-native-router-flux package
+
+- Visualizando devices
+adb devices

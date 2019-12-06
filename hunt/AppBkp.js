@@ -5,7 +5,7 @@ export default class App extends Component{
   render(){
     return(
       <View styles={styles.container}>
-        <Text styles={styles.welcome}> Welcome to React Native</Text>       
+        <Text styles={styles.welcome}> Welcome to React Native Math</Text>       
         <View styles={styles.box}>
         </View> 
       </View>
