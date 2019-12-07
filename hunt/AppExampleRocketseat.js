@@ -1,17 +1,19 @@
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View} from 'react-native';
+import {Platform, StyleSheet, Text, View} from 'react-native'
 
+/* Componente - geralmente escrito como classe e é exportado. 1 por arquivo */
 export default class App extends Component{
   render(){
     return(
-      <View styles={styles.container}>
-        <Text styles={styles.welcome}> Welcome to React Native Math</Text>       
-        <View styles={styles.box}>
-        </View> 
-      </View>
+      <View style={styles.container}>
+        <Text style={styles.welcome}>Welcome to React Native!</Text>      
+        <View style={styles.box}/>
+
+      </View> 
     );
   }
 }
+
 
 const styles = StyleSheet.create({
   container:{
@@ -31,3 +33,8 @@ const styles = StyleSheet.create({
     backgroundColor: "#F00",    
   }
 });
+/* justifyContent: "flex-start" ou flex-end
+Comandos faltando: npm add react-navigation
+Pasta src
+
+*/

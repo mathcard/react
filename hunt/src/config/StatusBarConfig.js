@@ -1,4 +1,9 @@
-import { StatusBar } from 'react-native';
+import { StatusBar } from "react-native";
+ 
+//Definindo a cor dos icones (Sinal, Bateria, Hora);
 
-StatusBar.setBackgroundColor('#DA552F'); // Android
-//StatusBar.setBarStyle('light-content'); // IOS
+// Android
+StatusBar.setBackgroundColor("#DA552F");
+
+// IOS
+StatusBar.setBarStyle("light-content");
