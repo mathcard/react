@@ -4,8 +4,9 @@ import { View, Text, FlatList, TouchableOpacity, StyleSheet } from 'react-native
 
 
 export default class Main extends Component{
+    // Titulo da appBar
     static navigationOptions = {
-        title: "JSHunt"       
+        title: "JSHunt Math"       
     };
     
     // ESTADO Objeto que serve para armazenar toda informação manipulada dentro da classe.
@@ -27,7 +28,7 @@ export default class Main extends Component{
         const response = await api.get(`/products?page=${page}`);
         const { docs, ...productInfo } = response.data;
         console.log(docs);
-        this.setState({  docs: [...this.state.docs, ...docs], productInfo, page});
+        this.setState({  docs: [...this.state.docs, ...docs], productInfo, page}); // Manter as informações e adicionar as novas
         
     };
     
@@ -44,7 +45,7 @@ export default class Main extends Component{
         <View style={styles.productContainer}>
             <Text style={styles.productTitle}>{item.title}</Text>
             <Text style={styles.productDescription}>{item.description}</Text>
-            <TouchableOpacity style={styles.productButton} onPress={() => {
+            <TouchableOpacity style={styles.productButton} onPress={() => { //Fica mais claro ao clicar
                 this.props.navigation.navigate('Product', {product: item});
             } }>
                 <Text style={styles.productButtonText}>Acessar</Text>
@@ -57,11 +58,11 @@ export default class Main extends Component{
             <View style={styles.container}>
                 <FlatList 
                     contentContainerStyle={styles.list}
-                    data={this.state.docs} 
-                    keyExtractor={item => item._id} 
+                    data={this.state.docs} // variavel armazena os dados
+                    keyExtractor={item => item._id} // Key obrigatorio quando utiliza o map
                     renderItem={this.renderItem}
                     onEndReached={this.loadMore}     
-                    onEndReachedThreshold={0.1}
+                    onEndReachedThreshold={0.1} // 10% para carregar a proxima pagina
                  />
             </View>            
         );
@@ -76,7 +77,7 @@ export default class Main extends Component{
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
+        flex: 1, //Ocupa a tela toda
         backgroundColor: "#fafafa"
     },
 
