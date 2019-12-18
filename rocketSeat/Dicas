@@ -15,7 +15,29 @@ yarn start
 A div id="root" incorpora o codigo em react
 
 
-Parei Omni Stack 6.0 - 12.48m
+
+Parei Omni Stack 6.0 - video 3 12.48m (Pulei o video 2) retornando
+
+BACKEND
+
+Pq utilizar NODE.JS? Arquitetura NOBlockIO -> Processa requisição de formas paralelas. 
+
+Comandos inicias
+- Inician packege.json - Anota as dependencias instaladas na aplicação
+yarn init -y
+
+- EXPRESS - Define as rotas (micro-framework e middleware)
+yarn add express
+
+- Monitora as alteraçõs js e restart o servidor - Criei script no packege.json: yarn dev
+yarn add nodemon -D
+
+- Iniciando node.js - Criei script no packege.json: yarn start
+node src\server.js
 
 
 
+Arquitetura MVC - Model, View, Controller
+COntrollers - Regras de negocio; 
+Models - Abstração das tabelas;
+View - Utilizado nas proximas aulas - React
