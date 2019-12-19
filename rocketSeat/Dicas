@@ -15,12 +15,7 @@ yarn create react-app frontend
 -Iniciando ambiente dev - Terminal do VScode
 yarn start
 
-
 A div id="root" incorpora o codigo em react
-
-
-
-
 
 BACKEND
 
@@ -39,7 +34,8 @@ yarn add nodemon -D
 - Iniciando node.js - Criei script no packege.json: yarn start
 node src\server.js
 
-
+- Instalando MONGODB - Abstração do banco de dados
+yarn add mongoose
 
 Arquitetura MVC - Model, View, Controller
 COntrollers - Regras de negocio; 
