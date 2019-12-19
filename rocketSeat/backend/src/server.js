@@ -1,6 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
-
+const path = require('path');
 
 const app = express();
 
@@ -11,6 +11,7 @@ mongoose.connect('mongodb+srv://omnistack:omnistack@cluster0-bakma.mongodb.net/t
 
 app.use(express.json()); //Cadastrando módulo dentro do express
 app.use(express.urlencoded({ extended: true})); // Allow send files
+app.use('/files', express.static(path.resolve(__dirname, '..', 'tmp'))); // Sempre que acessar pasta files buscar arquivos fisicos na temp
 
 app.use(require('./routes')); // Importando variavel routes
 

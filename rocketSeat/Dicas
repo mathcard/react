@@ -1,5 +1,5 @@
 Parei Omni Stack 6.0 - video 3 12:48m (Pulei o video 2) retornando
-Parei Omni Stack 6.0 - video 2 49:00m
+Parei Omni Stack 6.0 - video 2 62:00m
 
 
 Instalar as ferramentas node.js, yarn, npm, chocolatey.
@@ -46,3 +46,9 @@ INSOMNIA - Testa os codigos rest
 
 - MULTER -  Realizar UPLOAD Crei o arquivo multer.js dentro de config -
 yarn add multer
+
+
+
+
+  "baseUrl": "http://localhost:3333"
+{{ baseUrl  }}/boxes
