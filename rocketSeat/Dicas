@@ -1,5 +1,5 @@
 Parei Omni Stack 6.0 - video 3 12:48m (Pulei o video 2) retornando
-Parei Omni Stack 6.0 - video 2 21:20m
+Parei Omni Stack 6.0 - video 2 49:00m
 
 
 Instalar as ferramentas node.js, yarn, npm, chocolatey.
@@ -41,3 +41,8 @@ Arquitetura MVC - Model, View, Controller
 COntrollers - Regras de negocio; 
 Models - Abstração das tabelas;
 View - Utilizado nas proximas aulas - React
+
+INSOMNIA - Testa os codigos rest
+
+- MULTER -  Realizar UPLOAD Crei o arquivo multer.js dentro de config -
+yarn add multer
