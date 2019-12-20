@@ -37,6 +37,6 @@ app.use('/files', express.static(path.resolve(__dirname, '..', 'tmp'))); // Semp
 app.use(require('./routes')); // Importando variavel routes
 
 
-server.listen(3333); // Port Number, i chose@
+server.listen(process.env.PORT || 3333); // Port Number, deixa o servidor escolher
 
 
