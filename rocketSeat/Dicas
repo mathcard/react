@@ -43,12 +43,13 @@ Models - Abstração das tabelas;
 View - Utilizado nas proximas aulas - React
 
 INSOMNIA - Testa os codigos rest
+HEROKU - Roda aplicação online
 
 - MULTER -  Realizar UPLOAD Crei o arquivo multer.js dentro de config -
 yarn add multer
 
+- Trabalhando com REAL TIME
+yarn add socket.io
 
-
-
-  "baseUrl": "http://localhost:3333"
-{{ baseUrl  }}/boxes
+- Definindo que acessa a aplicação - CORS
+yarn add cors
