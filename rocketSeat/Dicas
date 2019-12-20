@@ -53,3 +53,5 @@ yarn add socket.io
 
 - Definindo que acessa a aplicação - CORS
 yarn add cors
+
+Procfile - Arquivo que o heroku utiliza
