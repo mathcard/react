@@ -18,7 +18,7 @@ const File = new mongoose.Schema({
  
 // Função que gera url para ser acessado no frontend
 File.virtual('url').get(function(){
-     // Deixa o servidor escolher a variavel de ambiente
+     // Deixa o servidor escolher a variavel de ambiente. envia novamente
     const url = process.env.URL || 'http://localhost:3333'   
     return `${url}/files/${encodeURIComponent(this.path)}`;
 });
