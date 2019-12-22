@@ -1,4 +1,4 @@
-Parei Omni Stack 6.0 - video 3 12:48m (Pulei o video 2) retornando
+﻿Parei Omni Stack 6.0 - video 3 29:00m (Pulei o video 2) retornando
 
 ****** FERRAMENTAS NECESSARIAS ***** 
 sdk e java
@@ -58,6 +58,7 @@ yarn create react-app frontend
 -Iniciando ambiente dev - Terminal do VScode
 yarn start
 
-A div id="root" incorpora o codigo em react
+- Instalando axios para consumir api
+yarn add axios
 
-
+index.js - Chama arquivo App.js e renderiza o que esta no render() para div root no html
