@@ -78,3 +78,5 @@ yarn add react-dropzone
 
 - Atualizando a visualização de arquivos automaticamente
 yarn add socket.io-client
+
+Adicionando buildpack no heruku: mars/create-react-app
