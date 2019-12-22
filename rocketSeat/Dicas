@@ -1,24 +1,21 @@
 Parei Omni Stack 6.0 - video 3 12:48m (Pulei o video 2) retornando
-Parei Omni Stack 6.0 - video 2 62:00m
 
-
+****** FERRAMENTAS NECESSARIAS ***** 
+sdk e java
 Instalar as ferramentas node.js, yarn, npm, chocolatey.
 
-Variaveis de ambiente
+****** Variaveis de ambiente ******
 ANDROID_HOME = C:\Users\matheus.cardoso\AppData\Local\Android\Sdk
 JAVA_HOME = C:\Program Files\Java\jdk1.8.0_211
 Path = %ANDROID_HOME%\platform-tools;%ANDROID_HOME%\tools;C:\Users\matheus.cardoso\AppData\Roaming\npm;C:\Users\matheus.cardoso\AppData\Local\Yarn\bin
 
--Criando projeto
-yarn create react-app frontend
+******* ESTRUTURA DO PROJETO ********
+Arquitetura MVC - Model, View, Controller
+COntrollers - Regras de negocio; 
+Models - Abstração das tabelas;
+View - Utilizado nas proximas aulas - React
 
--Iniciando ambiente dev - Terminal do VScode
-yarn start
-
-A div id="root" incorpora o codigo em react
-
-BACKEND
-
+*********** BACKEND - INICIO ***********
 Pq utilizar NODE.JS? Arquitetura NOBlockIO -> Processa requisição de formas paralelas. 
 
 Comandos inicias
@@ -37,11 +34,6 @@ node src\server.js
 - Instalando MONGODB - Abstração do banco de dados
 yarn add mongoose
 
-Arquitetura MVC - Model, View, Controller
-COntrollers - Regras de negocio; 
-Models - Abstração das tabelas;
-View - Utilizado nas proximas aulas - React
-
 INSOMNIA - Testa os codigos rest
 HEROKU - Roda aplicação online
 
@@ -55,3 +47,17 @@ yarn add socket.io
 yarn add cors
 
 Procfile - Arquivo que o heroku utiliza
+
+*********** BACKEND - FIM ***********
+
+*********** FRONTEND ***********
+
+-Criando projeto
+yarn create react-app frontend
+
+-Iniciando ambiente dev - Terminal do VScode
+yarn start
+
+A div id="root" incorpora o codigo em react
+
+
