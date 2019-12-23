@@ -1,4 +1,4 @@
-﻿Parei Omni Stack 6.0 - video 4 32:00m - Ola mundo
+﻿Parei Omni Stack 6.0 - video 4 49:00m - Terminando de importa as libs
 
 ****** FERRAMENTAS NECESSARIAS ***** 
 sdk e java
@@ -98,6 +98,47 @@ react-native run-android
 
 - Abrindo app pela segunda vez
 react-native start 
+
+- Conectando na api
+yarn add axios
+
+- Banco de dados local, armazena info dos users - Precisa linkar
+yarn add @react-native-community/async-storage
+react-native link @react-native-community/async-storage
+
+- Adicionando varios icones - Precisa linkar
+yarn add react-native-vector-icons
+react-native link react-native-vector-icons
+
+- Lidar com arquivos
+yarn add react-native-fs
+react-native link react-native-fs
+
+- Abrir galeria de fotos
+No android, acrescentar linhas: android/app/src/main/AndroidManifest.xml
+<uses-permission android:name="android.permission.CAMERA" />
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+Instalação image picker
+yarn add react-native-image-picker
+react-native link react-native-image-picker
+
+- Abrir arquivos dentro da aplicação
+yarn add react-native-file-viewer
+react-native link react-native-file-viewer
+Copiar a pasta xml /node-modules/react-native-file-viewer/android/src/res
+
+Depois colar isso no android manifest:
+	<provider
+		android:name="com.vinzscam.reactnativefileviewer.FileProvider"
+		android:authorities="${applicationId}.provider"
+		android:exported="false"
+		android:grantUriPermissions="true">
+		<meta-data
+			android:name="android.support.FILE_PROVIDER_PATHS"
+			android:resource="@xml/file_viewer_provider_paths"
+		/>
+	</provider>
 
 Erro no run-android: Alterar uma variavel em node_modules/metro-config/src/defaults/blacklist.js
 ---------------------------------------------------------------------------------
