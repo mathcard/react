@@ -1,4 +1,4 @@
-﻿Parei Omni Stack 6.0 - video 4 49:00m - Terminando de importa as libs
+﻿Parei Omni Stack 6.0 - video 4 49:00m/60:00 - Terminando de importa as libs
 
 ****** FERRAMENTAS NECESSARIAS ***** 
 sdk e java
@@ -139,6 +139,12 @@ Depois colar isso no android manifest:
 			android:resource="@xml/file_viewer_provider_paths"
 		/>
 	</provider>
+
+- Lib Ajuda a calcular o tamanho dos elementos
+yarn add react-native-iphone-x-helper
+
+- Atualizando automaticamente
+yarn add socket.io
 
 Erro no run-android: Alterar uma variavel em node_modules/metro-config/src/defaults/blacklist.js
 ---------------------------------------------------------------------------------

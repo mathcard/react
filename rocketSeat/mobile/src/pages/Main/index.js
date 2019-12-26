@@ -11,6 +11,14 @@ export default class Main extends Component {
     newBox: ''
   };
 
+  // Verifica se existe box para o usuario
+  async componentDidMount(){
+    const box = await AsyncStorage.getItem('@RocketBox:box');
+    if(box){
+      this.props.navigation.navigate('Box');      
+    }
+  }
+
   // Quando usuário clicar no botão
   handleSignIn = async() =>{
     const response = await api.post('/boxes', {
@@ -19,7 +27,7 @@ export default class Main extends Component {
 
     await AsyncStorage.setItem('@RocketBox:box', response.data._id);
     
-    this.props.navigation.navigate('Box');    
+    this.props.navigation.navigate('Box');  // Navegacao para pagina  
   };
 
   render() {
