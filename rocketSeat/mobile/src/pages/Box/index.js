@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Text, View, FlatList, TouchableOpacity } from 'react-native'
 import AsyncStorage from '@react-native-community/async-storage';
-import { distanceInWords } from 'date-fns';
+import { formatDistance } from 'date-fns';
 import pt from 'date-fns/locale/pt';
 import ImagePicker from 'react-native-image-picker';
 import RNFS from 'react-native-fs';
@@ -34,13 +34,11 @@ export default class Box extends Component {
 
 openFile = async (file) => {
     try{
-      const filePath = `${RNFS.DocumentDirectoryPath}/${file.title}`;
-      
+      const filePath = `${RNFS.DocumentDirectoryPath}/${file.title}`;      
       await RNFS.downloadFile({
         fromUrl: file.url,
         toFile: filePath,
       })
-
       await FileViewer.open(filePath)
     }catch(err){
       console.log('Arquivo não suportado');
@@ -55,7 +53,6 @@ openFile = async (file) => {
         console.log('Canceled by user');
       }else{
         const data = new FormData();
-
         // Definindo nome no IOS
         const [prefix, suffix] = upload.fileName.split('.');
         const ext = suffix.toLowerCase() === 'heic' ? 'jpg' : suffix;
@@ -70,33 +67,38 @@ openFile = async (file) => {
     });
   };
 
-  renderItem = ({ item }) =>(
+  renderItem = ({ item }) =>(       
     <TouchableOpacity onPress={() => this.openFile(item)} style={styles.file}>
       <View style={styles.fileInfo}>
         <Icon name="insert-drive-file" size={24} color="#A5CFFF"/>
         <Text style={styles.fileTitle}>{item.title}</Text>
       </View> 
       <Text style={styles.fileDate}>     
-        há {/* SIPLESMENTE NÃO FUNCIONA distanceInWords(item.createdAt, new Date(), {
-          locale: pt
-        })*/}   
+      {item.createdAt}       
+        {        
+        /*
+        FUNCAO QUE SUBSTITUE NÃO FUNCIONOU
+        formatDistance(item.createdAt, new Date())
+
+        EXEMPLO ROCKETSEAT - NÃO FUNCIONOU
+        {distanceInWords(file.createdAt, new Date(), {
+            locale: pt
+        }) */}        
+        }   
       </Text>
     </TouchableOpacity>
   );
-
 
   render() {
     return (
       <View style={styles.container}>
         <Text style={styles.boxTitle}>{this.state.box.title}</Text>        
-        < FlatList 
+        <FlatList 
           style={styles.list} 
           data={this.state.box.files}
           keyExtractor={file => file._id}
           ItemSeparatorComponent={()=> <View style={styles.separator}/>}
-          renderItem={this.renderItem}
-        />
-
+          renderItem={this.renderItem}/>
         <TouchableOpacity style={styles.lab} onPress={this.handleUpload}>
           <Icon name="cloud-upload" size={24} color="#FFF" />
         </TouchableOpacity>
