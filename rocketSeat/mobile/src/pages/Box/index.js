@@ -1,25 +1,23 @@
 import React, { Component } from 'react'
 import { Text, View, FlatList, TouchableOpacity } from 'react-native'
-import AsyncStorage from 'react-native-community/async-storage';
-import { distanceInWords } from 'Date-fns';
+import AsyncStorage from '@react-native-community/async-storage';
+import { distanceInWords } from 'date-fns';
 import pt from 'date-fns/locale/pt';
 import ImagePicker from 'react-native-image-picker';
 import RNFS from 'react-native-fs';
 import FileViewer from 'react-native-file-viewer';
-
+import socket from 'socket.io-client'
 import api from '../../services/api';
 import Icon from 'react-native-vector-icons/MaterialIcons';
-
-
 import styles from './styles';
-import AsyncStorage from '@react-native-community/async-storage';
 
 export default class Box extends Component {
-  state = { box: {}};
+  state = { box: {} };
  
   async componentDidMount(){
-    //this.subscribeToNewFiles();
+    this.subscribeToNewFiles(box);
     const box = await AsyncStorage.getItem('@RocketBox:box');
+    console.log(box);
     const response = await api.get(`boxes/${box}`);
     this.setState({ box: response.data });
 }
@@ -34,10 +32,7 @@ export default class Box extends Component {
     });
 }
 
-
-
-
-  openFile = async (file) => {
+openFile = async (file) => {
     try{
       const filePath = `${RNFS.DocumentDirectoryPath}/${file.title}`;
       
@@ -71,8 +66,6 @@ export default class Box extends Component {
           name: `${prefix}.${ext}`
         })
         api.post(`boxes/${this.state.box._id}/files`, data);
-
-
       }
     });
   };
@@ -81,13 +74,12 @@ export default class Box extends Component {
     <TouchableOpacity onPress={() => this.openFile(item)} style={styles.file}>
       <View style={styles.fileInfo}>
         <Icon name="insert-drive-file" size={24} color="#A5CFFF"/>
-        <Text style={styles.fileTitle}></Text>
-      </View>
-      <Text style={styles.fileDate}>
-        há {distanceInWords(item.createdAt, new Date(), {
+        <Text style={styles.fileTitle}>{item.title}</Text>
+      </View> 
+      <Text style={styles.fileDate}>     
+        há {/* SIPLESMENTE NÃO FUNCIONA distanceInWords(item.createdAt, new Date(), {
           locale: pt
-        })}
-
+        })*/}   
       </Text>
     </TouchableOpacity>
   );
@@ -96,7 +88,7 @@ export default class Box extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.boxTitle}> this.state.box.title </Text>
+        <Text style={styles.boxTitle}>{this.state.box.title}</Text>        
         < FlatList 
           style={styles.list} 
           data={this.state.box.files}
