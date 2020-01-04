@@ -34,7 +34,7 @@ node src\server.js
 - Instalando MONGODB - Abstração do banco de dados
 yarn add mongoose
 
-MONGO ATLAS - Banco de dados Online
+MONGO ATLAS - Banco de dados Online gmail/#Mathcrack1418
 INSOMNIA - Testa os codigos rest
 HEROKU - Roda aplicação online
 

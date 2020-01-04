@@ -1,0 +1,7 @@
+PAREI 31:33 MIN
+
+- Criando projeto frontend
+yarn create react-app frontend
+
+- ROTAS
+instalação: yarn add react-router-dom
