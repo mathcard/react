@@ -23,6 +23,11 @@ class Feed extends Component {
     this.setState({ feed: response.data });
   }
   
+  // Curtir - Recebe a chamanda passando id como padrão
+  handleLike = id => {
+    api.post(`/posts/${id}/like`);
+  }
+
   render(){
     return (
       <section id="post-list">
@@ -39,7 +44,9 @@ class Feed extends Component {
           <img src={`http://localhost:3333/files/${post.image}`} alt="" />
           <footer>
             <div className="actions">
-              <img src={like} alt="" />
+              <button type="button" onClick={() => this.handleLike(post._id)}>
+                <img src={like} alt="" />
+              </button>              
               <img src={comment} alt="" />
               <img src={send} alt="" />                
             </div>              

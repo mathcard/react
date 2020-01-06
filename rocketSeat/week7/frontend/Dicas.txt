@@ -1,4 +1,4 @@
-PAREI video 3 minuto 40
+PAREI video 3 minuto 49
 
 - Criando projeto frontend
 yarn create react-app frontend
@@ -11,3 +11,6 @@ instalação: yarn add react-router-dom
 
 - AXIOS - Requisição ajax, utilizado no services
 instalação: yarn add axios
+
+
+Deu problema no comando react-scripts, tive que copiar o node-modules
