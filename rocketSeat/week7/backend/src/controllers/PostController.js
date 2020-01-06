@@ -16,7 +16,7 @@ module.exports = {
     const { filename: image } = req.file;
 
     // Definindo imagem como JPG
-    const [name, ext] = image.split('.');
+    const [name] = image.split('.');
     const fileName = `${name}.jpg`;
     
     // Redimensiona a imagem
@@ -36,7 +36,7 @@ module.exports = {
       place, 
       description,
       hashtags,
-      fileName,
+      image: fileName,
     });
 
     req.io.emit('post', post); // Atualiza real time
