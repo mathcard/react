@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import api from '../services/api';
+import io from 'socket.io-client';
+
 import './Feed.css';
 
 import more from '../assets/more.png';
@@ -17,12 +19,36 @@ class Feed extends Component {
 
   // Executa automaticamente qdo componente e colocado em tela
   async componentDidMount(){
+    this.registerToSocket();
+
     const response = await api.get('posts');
 
     // Alterando o valor da variavel com os dados da api
     this.setState({ feed: response.data });
   }
-  
+
+  // Colocando app em real time
+  registerToSocket = () => {
+    const socket = io('http://localhost:3333');
+    
+    // Novo post na primeira posiçao
+    socket.on('post', newPost => {
+      this.setState({ feed: [newPost, ... this.state.feed]});
+    })
+
+    // Novo like
+    socket.on('like', likedPost => {
+      this.setState({
+        feed : this.state.feed.map(post =>           // Busca todos os post e coloca no map
+          post._id == likedPost._id ? likedPost : post
+          // Validando e atualizando o valor do post
+        )
+      })
+    })
+
+  }
+
+
   // Curtir - Recebe a chamanda passando id como padrão
   handleLike = id => {
     api.post(`/posts/${id}/like`);
