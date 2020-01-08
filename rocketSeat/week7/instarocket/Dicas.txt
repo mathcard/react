@@ -1,0 +1,25 @@
+Parei minuto 14
+
+- Criando projeto
+react-native init instarocket
+
+- Iniciando projeto
+react-native run-android
+Para escolhor o emulador: --simulator "nome do simulador"
+
+- Reiniciando o app
+react-native start
+
+
+
+
+
+Erro no run-android: Alterar uma variavel em node_modules/metro-config/src/defaults/blacklist.js
+---------------------------------------------------------------------------------
+var sharedBlacklist = [
+  /node_modules[\/\\]react[\/\\]dist[\/\\].*/,
+  /website\/node_modules\/.*/,
+  /heapCapture\/bundle\.js/,
+  /.*\/__tests__\/.*/
+];
+---------------------------------------------------------------------------------
