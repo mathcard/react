@@ -1,6 +1,7 @@
-Parei minuto 14
 
-- Criando projeto
+Stop on fourteen minutes
+
+- Criando projeto - CREATE PROJECT
 react-native init instarocket
 
 - Iniciando projeto
@@ -9,6 +10,20 @@ Para escolhor o emulador: --simulator "nome do simulador"
 
 - Reiniciando o app
 react-native start
+react-native start --reset-cache
+
+- Navegação - Need to link
+Instalação: yarn add react-navigation react-native-gesture-handler
+NÃO LINK react-native-gesture-handler
+react-native unlink react-native-gesture-handler
+
+yarn add react-navigation-stack
+
+
+
+
+
+
 
 
 
