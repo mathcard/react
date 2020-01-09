@@ -12,9 +12,5 @@ export default createAppContainer(
   createStackNavigator({
     Feed, 
     New,
-  }, {
-    defaultNavigationOptions: {
-      headerTitle: 'InstaRocket'
-    },
   })
 );  

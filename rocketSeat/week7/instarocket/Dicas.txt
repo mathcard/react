@@ -1,6 +1,9 @@
 
 Stop on fourteen minutes
 
+- Instalando pacotes com o projeto em outra maquina
+npm install
+
 - Criando projeto - CREATE PROJECT
 react-native init instarocket
 
@@ -12,19 +15,18 @@ Para escolhor o emulador: --simulator "nome do simulador"
 react-native start
 react-native start --reset-cache
 
-- Navegação - Need to link
-Instalação: yarn add react-navigation react-native-gesture-handler
-NÃO LINK react-native-gesture-handler
-react-native unlink react-native-gesture-handler
-
-yarn add react-navigation-stack
+- REACT NAVIGATION - Instalação problematica
+Instalação: yarn add react-navigation 
+Instalação: yarn add react-native-reanimated react-native-gesture-handler react-native-screens react-native-safe-area-context
 
 
+Adicionar em: android/app/build.gradle
+implementation 'androidx.appcompat:appcompat:1.1.0-rc01'
+implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0-alpha02'
 
-
-
-
-
+Instalação: yarn add @react-native-community/masked-view
+Confere o blacklist
+Resetar cache: react-native start --reset-cache
 
 
 
@@ -38,3 +40,6 @@ var sharedBlacklist = [
   /.*\/__tests__\/.*/
 ];
 ---------------------------------------------------------------------------------
+
+
+C:\reactNative\rocketSeat\week7\instarocket\android\app\src\main\java\com\instarocket

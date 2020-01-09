@@ -6,7 +6,7 @@ Instalar as ferramentas node.js, yarn, npm, chocolatey.
 
 ****** Variaveis de ambiente ******
 ANDROID_HOME = C:\Users\matheus.cardoso\AppData\Local\Android\Sdk
-JAVA_HOME = C:\Program Files\Java\jdk1.8.0_211
+JAVA_HOME = C:\Program Files\Java\jdk1.8.0_211 no trabalho mudei para: C:\Program Files\Java\jre1.8.0_211
 Path = %ANDROID_HOME%\platform-tools;%ANDROID_HOME%\tools;C:\Users\matheus.cardoso\AppData\Roaming\npm;C:\Users\matheus.cardoso\AppData\Local\Yarn\bin
 
 ******* ESTRUTURA DO PROJETO ********
