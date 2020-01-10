@@ -1,5 +1,5 @@
 
-Stop on fourteen minutes
+Stop on forty five minutes
 
 - Instalando pacotes com o projeto em outra maquina
 npm install
@@ -29,6 +29,9 @@ Confere o blacklist
 Resetar cache: react-native start --reset-cache
 
 
+AXIOS - requisição para api
+instalação: yarn add axios
+Emulador usa localhost, USB ip 
 
 
 Erro no run-android: Alterar uma variavel em node_modules/metro-config/src/defaults/blacklist.js

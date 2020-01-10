@@ -1,12 +1,13 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, Image } from 'react-native';
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
+
 
 import Feed from './pages/Feed';
 import New from './pages/New';
 
-//import logo from './assets/logo.png';
+import logo from './assets/logo.png';
 
 export default createAppContainer(
   createStackNavigator({
@@ -14,7 +15,10 @@ export default createAppContainer(
     New,
   }, {
     defaultNavigationOptions: {
-      headerTitle: 'InstaRocket'
+      headerTintColor: '#000',
+      headerTitle: <Image style={{marginHorizontal: 80}} source={logo} />,
+      headerBackTitle: null,
     },
+    mode: 'modal' // Animação debaixo para cima
   })
 );  
