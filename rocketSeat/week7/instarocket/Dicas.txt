@@ -1,5 +1,5 @@
 
-Stop on forty five minutes
+Stop on fifty four minutes
 
 - Instalando pacotes com o projeto em outra maquina
 npm install
@@ -32,6 +32,12 @@ Resetar cache: react-native start --reset-cache
 AXIOS - requisição para api
 instalação: yarn add axios
 Emulador usa localhost, USB ip 
+
+
+SOCKET.IO -  Colocando em Real Time
+yarn add socket.io-client
+
+OCULTANDO WARNINGS - Exemplos no arquivo index.js
 
 
 Erro no run-android: Alterar uma variavel em node_modules/metro-config/src/defaults/blacklist.js

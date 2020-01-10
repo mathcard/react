@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import io from 'socket.io-client';
 import api from '../services/api';
 import { View, Text, Image, StyleSheet, TouchableOpacity, FlatList } from 'react-native';
 
@@ -18,20 +19,45 @@ export default class Feed extends Component {
   });
   
 
-  // Variavel dentro do componente para armazenar informações que serão alteradas  
+  // ARMAZENANDO VARIAVEIS ALTERADAS
   state = {
     feed : [],
   };
 
   // Executa automaticamente qdo componente e colocado em tela
   async componentDidMount(){
-    //this.registerToSocket();
+    this.registerToSocket(); // Deve ficar habilitado apenas com realtime configurado
 
     const response = await api.get('posts');
-
+    console.log('teste');
     console.log(response.data);
     // Alterando o valor da variavel com os dados da api
     this.setState({ feed: response.data });
+  }
+
+   // COLOCANDO EM REAL TIME
+   registerToSocket = () => {
+    const socket = io('http://192.168.0.72:3333');
+    
+    // Novo post na primeira posiçao
+    socket.on('post', newPost => {
+      this.setState({ feed: [newPost, ... this.state.feed]});
+    })
+
+    // Novo like
+    socket.on('like', likedPost => {
+      this.setState({
+        feed : this.state.feed.map(post =>           // Busca todos os post e coloca no map
+          post._id == likedPost._id ? likedPost : post
+          // Validando e atualizando o valor do post
+        )
+      })
+    })        
+  }
+
+  // Curtir - Recebe a chamanda passando id como padrão
+  handleLike = id => {
+    api.post(`/posts/${id}/like`);
   }
 
 
@@ -50,16 +76,16 @@ export default class Feed extends Component {
                 </View>                
               <Image source={more} />
               </View>              
-            <Image style={styles.feedImage} source={{uri: `http://192.168.15.7:3333/${item.image}`}} />
+            <Image style={styles.feedImage} source={{uri: `http://192.168.0.72:3333/files/${item.image}`}} />
             <View style={styles.feedItemFooter}> 
               <View style={styles.actions}>
-                <TouchableOpacity onPress={() => {}}>
+                <TouchableOpacity style={styles.action} onPress={() => this.handleLike(item._id)}>
                   <Image source={like} />
                 </TouchableOpacity>
-                <TouchableOpacity onPress={() => {}}>
+                <TouchableOpacity style={styles.action} onPress={() => {}}>
                   <Image source={comment} />
                 </TouchableOpacity>
-                <TouchableOpacity onPress={() => {}}>
+                <TouchableOpacity style={styles.action} onPress={() => {}}>
                   <Image source={send} />
                 </TouchableOpacity>
               </View>
@@ -77,5 +103,52 @@ export default class Feed extends Component {
 }
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+  feedItem: {
+    marginTop: 20,
+  },
+  feedItemHeader: {
+    paddingHorizontal: 15,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  name: {
+    fontSize: 14,
+    color: '#000',
+  },
+  place:{
+    fontSize: 12,
+    color: '#666',
+    marginTop: 2,
+  },
+  feedImage:{
+    width: '100%',
+    height: 400,
+    marginVertical: 15,
+  },
+  feedItemFooter:{
+    paddingHorizontal: 15,
+  },
+  actions: {
+    flexDirection: 'row'
+  },
+  action:{
+    marginRight: 8,
+  },
+  likes:{
+    marginTop: 15,
+    fontWeight: 'bold',
+    color: '#000',
+  },
+  description: {
+    lineHeight: 18,
+    color: '#000'
+  },
+  hashtags: {
+    color: '#7159c1',
+  },
 
 });

@@ -12,14 +12,14 @@ import send from '../assets/send.png';
 
 class Feed extends Component {
   
-  // Variavel dentro do componente para armazenar informações que serão alteradas  
+  // ARMAZENANDO VARIAVEIS ALTERADAS
   state = {
     feed : [],
   };
 
   // Executa automaticamente qdo componente e colocado em tela
   async componentDidMount(){
-    this.registerToSocket();
+    this.registerToSocket(); // Deve ficar habilitado apenas com realtime configurado
 
     const response = await api.get('posts');
 
@@ -27,7 +27,7 @@ class Feed extends Component {
     this.setState({ feed: response.data });
   }
 
-  // Colocando app em real time
+  // COLOCANDO EM REAL TIME
   registerToSocket = () => {
     const socket = io('http://localhost:3333');
     
