@@ -35,7 +35,18 @@ Emulador usa localhost, USB ip
 
 
 SOCKET.IO -  Colocando em Real Time
-yarn add socket.io-client
+instalação: yarn add socket.io-client
+
+IMAGE PICKER - Utilizando a camera (install on github)
+instalação: yarn add react-native-image-picker
+
+Editar codigos: IOS: Info.plist
+ANDROID: android/app/src/main/AndroidManifest.xml
+<uses-permission android:name="android.permission.CAMERA" />
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+
+
 
 OCULTANDO WARNINGS - Exemplos no arquivo index.js
 

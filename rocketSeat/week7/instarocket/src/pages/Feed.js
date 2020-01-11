@@ -37,7 +37,7 @@ export default class Feed extends Component {
 
    // COLOCANDO EM REAL TIME
    registerToSocket = () => {
-    const socket = io('http://192.168.0.72:3333');
+    const socket = io('http://192.168.15.7:3333');
     
     // Novo post na primeira posiçao
     socket.on('post', newPost => {
@@ -76,7 +76,7 @@ export default class Feed extends Component {
                 </View>                
               <Image source={more} />
               </View>              
-            <Image style={styles.feedImage} source={{uri: `http://192.168.0.72:3333/files/${item.image}`}} />
+            <Image style={styles.feedImage} source={{uri: `http://192.168.15.7:3333/files/${item.image}`}} />
             <View style={styles.feedItemFooter}> 
               <View style={styles.actions}>
                 <TouchableOpacity style={styles.action} onPress={() => this.handleLike(item._id)}>

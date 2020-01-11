@@ -14,7 +14,7 @@ export default createAppContainer(
     Feed, 
     New,
   }, {
-    initialRouteName: 'New', // Provisorio
+    //initialRouteName: 'New', // Provisorio
     defaultNavigationOptions: {
       headerTintColor: '#000',
       headerTitle: <Image style={{marginHorizontal: 80}} source={logo} />,
