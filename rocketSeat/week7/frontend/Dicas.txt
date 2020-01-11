@@ -1,4 +1,4 @@
-PAREI video 3 minuto 49
+﻿Necessario alterar o ip nos arquivos sercices.js e feed.js
 
 - Criando projeto frontend
 yarn create react-app frontend
