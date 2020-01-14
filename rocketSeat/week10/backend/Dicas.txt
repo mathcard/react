@@ -1,0 +1,31 @@
+Parei no 1:17
+
+- Inicindo projeto
+yarn init -y
+
+
+- Express (Servidor Web) const express no index.js, utilizado para as rotas
+yarn add express
+
+
+- NODEMON - Cria scripts no arquivo package.json para usar no desenvolvedor
+Neste caso para que o servidor reinicie após alteração, basta chamar o script com yarn dev
+Instalação:
+yarn add nodemon -D
+
+ - Iniciando servidor
+node src/index.js
+
+
+MONGOOSE 
+instalação: yarn add mongoose
+Connect: mongodb+srv://omnistack:<password>@cluster0-bakma.mongodb.net/test?retryWrites=true&w=majority
+Usuário: week7/week7
+Bando de dados: week10
+Network Access: Permite todos
+Site para validar Proxy: http://portquiz.net:27017
+
+AXIOS - Realiza chamadas para outras apis
+instalação: yarn add axios
+
+MongoDB Compass Communit

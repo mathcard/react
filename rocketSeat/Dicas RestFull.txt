@@ -1,0 +1,41 @@
+Métodos HTTP: GET, POST, PUT, DELETE
+
+Tipos de parâmetros:
+    
+QUERY PARAMS: Filtros, Ordenação, Paginação...
+Metodo: Put
+Requesição: http://localhost:3333/users/?search=Matheus
+Acesso: req.query 
+Code: 
+const express = require('express');
+const app = express();
+app.get('/', (request, response) => {
+    	console.log(request.query);
+});
+
+ROUTE PARAMS: Identificar um recurso na alteração, remoção.
+METODO: Post e Delete
+Requisição: http://localhost:3333/users/1
+Acesso: req.params
+Code:
+const express = require('express');
+const app = express();
+app.delete('/users/:id', (request, response) => {
+    console.log(request.params);
+});
+
+
+BODY: Inserção ou alteração
+Metodo: Put e Post
+Requisição: https://localhost:3333/users 
+As informaçãoes são passados no corpo { "name" : "matheus", "idade":"25" }
+
+Acesso: request.body
+Code:
+const express = require('express');
+const app = express();
+app.use(express.json()); // Habilitando JSON
+app.post('/users', (request, response) => {
+    console.log(request.body);
+});
+

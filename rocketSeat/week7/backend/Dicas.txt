@@ -5,7 +5,7 @@ Configurando o PostController
 yarn init -y
 
 - Express (Servidor Web)
-yard add express
+yarn add express
 
  - Iniciando servidor
 node src/index.js
