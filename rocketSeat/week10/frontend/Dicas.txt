@@ -1,0 +1,8 @@
+
+- Criando projeto frontend
+yarn create react-app fron
+
+APagar App.css, App.teste.js, index.css, logo.svg, serviceWork, setupTests.js
+
+- Instalando axios para consumir api
+yarn add axios

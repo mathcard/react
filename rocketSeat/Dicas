@@ -15,6 +15,14 @@ COntrollers - Regras de negocio;
 Models - Abstração das tabelas;
 View - Utilizado nas proximas aulas - React
 
+
+****** Basico do React *********
+Componente: Função isolada de Html, Css ou Js, não interfere no restante da aplicação
+Propriedade: Informações quem componente Pai passa para um filho.
+Estado: Informações mantidas pelo componente. (Imutabilidade).
+
+
+
 *********** BACKEND - INICIO ***********
 Pq utilizar NODE.JS? Arquitetura NOBlockIO -> Processa requisição de formas paralelas. 
 
