@@ -1,3 +1,4 @@
+Parei no minuto 59
 
 - Criando projeto frontend
 yarn create react-app fron
