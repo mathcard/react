@@ -5,5 +5,5 @@ yarn create react-app fron
 
 APagar App.css, App.teste.js, index.css, logo.svg, serviceWork, setupTests.js
 
-- Instalando axios para consumir api
+- Instalando axios para consumir Api
 yarn add axios
