@@ -20,7 +20,10 @@ module.exports = {
     
             // If(name)else{Login}
             const { name = login, avatar_url, bio } = apiResponse.data;
-                        
+            /*if(name==null){
+                name = apiResponse.data.login;
+            }*/
+            
             const techsArray = parseStringAsArray(techs);
             
             const location = {
