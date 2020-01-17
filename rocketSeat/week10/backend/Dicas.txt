@@ -1,4 +1,3 @@
-Parei no 1:19:30
 
 index - mostra lista
 show - monstra unico
@@ -16,7 +15,7 @@ yarn add express
 
 - NODEMON - Cria scripts no arquivo package.json para usar no desenvolvedor
 Neste caso para que o servidor reinicie ap�s altera��o, basta chamar o script com yarn dev
-Instala��o:
+instalação:
 yarn add nodemon -D
 
  - Iniciando servidor
@@ -24,7 +23,7 @@ node src/index.js
 
 
 MONGOOSE 
-instala��o: yarn add mongoose
+instalação: yarn add mongoose
 Connect: mongodb+srv://omnistack:<password>@cluster0-bakma.mongodb.net/test?retryWrites=true&w=majority
 Usu�rio: week7/week7
 Bando de dados: week10
@@ -32,6 +31,9 @@ Network Access: Permite todos
 Site para validar Proxy: http://portquiz.net:27017
 
 AXIOS - Realiza chamadas para outras apis
-instala��o: yarn add axios
+instalação: yarn add axios
+
+CORS - Permiter acessar por outro endereço
+instalação: yarn add cors
 
 MongoDB Compass Communit

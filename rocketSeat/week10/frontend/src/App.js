@@ -1,10 +1,15 @@
 import React, { useState, useEffect } from 'react';
+import api from './services/api';
 import './global.css';
 import './App.css';
 import './Sidebar.css';
 import './Main.css';
 
+import DevItem from './components/DevItem';
+
 function App() {
+  // Atribua uma variavel a uma função, insere os dados atraves do estado 
+  const [devs, setDevs] = useState([]);
   const [github_username, setGithub_username] = useState('');
   const [techs, setTechs] = useState('');
   const [latitude, setLatitude] = useState('');
@@ -31,13 +36,40 @@ function App() {
     );
   }, []);
   
+// Dispara uma função quando alguma informação alterar
+useEffect(() => {
+  async function loadDevs(){
+    const response = await api.get('/devs');
+    setDevs(response.data);
+  }
+  loadDevs();
+}, []);
+
+
+async function handleAddDev(e){
+  e.preventDefault();
   
+  const response = await api.post('/devs', {
+    github_username,
+    techs,
+    latitude,
+    longitude,
+  })
+  //console.log(response.data);
+
+  // Limpando os formularios
+  setGithub_username('');
+  setTechs('');
+  
+  // Chamando a função que lista os dados e adicionando na ultima posição
+  setDevs([...devs, response.data]);
+}
 
   return (
     <div id="app">
       <aside>
         <strong>Cadastrar</strong>
-        <form>
+        <form onSubmit={handleAddDev}>
           <div className="input-block">
             <label htmlFor="github_username"> Usuário do Github</label> 
             <input 
@@ -89,54 +121,11 @@ function App() {
         </form>
       </aside>
       <main>
-        <ul>
-          <li className="dev-item">
-            <header>
-              <img src="https://avatars1.githubusercontent.com/u/28113945?s=460&v=4" alt="Matheus do Carmo"/>
-              <div className="user-info">
-                <strong>Matheus do Carmo</strong>
-                <span>React Js, React Native, Node.js</span>
-              </div>            
-            </header>
-            <p>Student developer in news tecnologies!</p>
-            <a href="https://github.com/mathcard">Acessar perfil</a>
-          </li>
-
-          <li className="dev-item">
-            <header>
-              <img src="https://avatars1.githubusercontent.com/u/28113945?s=460&v=4" alt="Matheus do Carmo"/>
-              <div className="user-info">
-                <strong>Matheus do Carmo</strong>
-                <span>React Js, React Native, Node.js</span>
-              </div>            
-            </header>
-            <p>Student developer in news tecnologies!</p>
-            <a href="https://github.com/mathcard">Acessar perfil</a>
-          </li>
-
-          <li className="dev-item">
-            <header>
-              <img src="https://avatars1.githubusercontent.com/u/28113945?s=460&v=4" alt="Matheus do Carmo"/>
-              <div className="user-info">
-                <strong>Matheus do Carmo</strong>
-                <span>React Js, React Native, Node.js</span>
-              </div>            
-            </header>
-            <p>Student developer in news tecnologies!</p>
-            <a href="https://github.com/mathcard">Acessar perfil</a>
-          </li>
-
-          <li className="dev-item">
-            <header>
-              <img src="https://avatars1.githubusercontent.com/u/28113945?s=460&v=4" alt="Matheus do Carmo"/>
-              <div className="user-info">
-                <strong>Matheus do Carmo</strong>
-                <span>React Js, React Native, Node.js</span>
-              </div>            
-            </header>
-            <p>Student developer in news tecnologies!</p>
-            <a href="https://github.com/mathcard">Acessar perfil</a>
-          </li>
+        <ul>          
+        {devs.map(dev => (
+          <DevItem key={dev._id} dev={dev}/>
+        ))}
+          
         </ul>
       </main>
     </div>
