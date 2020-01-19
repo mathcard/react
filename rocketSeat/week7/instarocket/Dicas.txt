@@ -1,6 +1,4 @@
-﻿
-Stop on fifty four minutes
-Necessario alterar o ip nos arquivos sercices.js e feed.js
+﻿Necessario alterar o ip nos arquivos sercices.js e feed.js
 
 - Instalando pacotes com o projeto em outra maquina
 npm install

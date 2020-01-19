@@ -1,0 +1,90 @@
+****** FERRAMENTAS NECESSARIAS ***** 
+sdk e java
+Instalar as ferramentas node.js, yarn, npm, chocolatey.
+
+****** Variaveis de ambiente ******
+ANDROID_HOME = C:\Users\matheus.cardoso\AppData\Local\Android\Sdk
+JAVA_HOME = C:\Program Files\Java\jdk1.8.0_211 no trabalho mudei para: C:\Program Files\Java\jre1.8.0_211
+Path = %ANDROID_HOME%\platform-tools;%ANDROID_HOME%\tools;C:\Users\matheus.cardoso\AppData\Roaming\npm;C:\Users\matheus.cardoso\AppData\Local\Yarn\bin
+
+******* ESTRUTURA DO PROJETO ********
+Arquitetura MVC - Model, View, Controller
+COntrollers - Regras de negocio; 
+Models - Abstração das tabelas;
+View - Utilizado nas proximas aulas - React
+
+
+****** Basico do React *********
+Componente: Função isolada de Html, Css ou Js, não interfere no restante da aplicação
+Propriedade: Informações quem componente Pai passa para um filho.
+Estado: Informações mantidas pelo componente. (Imutabilidade).
+
+--- Comandos:
+Resetar cache: react-native start --reset-cache
+Atualizar pacotes em outra máquina: npm install
+
+**************** Rest Full ****************
+Métodos HTTP: GET, POST, PUT, DELETE
+
+Tipos de parâmetros:
+    
+---QUERY PARAMS: Filtros, Ordenação, Paginação...
+Metodo: Put
+Requesição: http://localhost:3333/users/?search=Matheus
+Acesso: req.query 
+Code: 
+const express = require('express');
+const app = express();
+app.get('/', (request, response) => {
+    	console.log(request.query);
+});
+
+---ROUTE PARAMS: Identificar um recurso na alteração, remoção.
+METODO: Post e Delete
+Requisição: http://localhost:3333/users/1
+Acesso: req.params
+Code:
+const express = require('express');
+const app = express();
+app.delete('/users/:id', (request, response) => {
+    console.log(request.params);
+});
+
+
+---BODY: Inserção ou alteração
+Metodo: Put e Post
+Requisição: https://localhost:3333/users 
+As informaçãoes são passados no corpo { "name" : "matheus", "idade":"25" }
+
+Acesso: request.body
+Code:
+const express = require('express');
+const app = express();
+app.use(express.json()); // Habilitando JSON
+app.post('/users', (request, response) => {
+    console.log(request.body);
+});
+
+
+**** Erro no run-android ***
+Alterar uma variavel em node_modules/metro-config/src/defaults/blacklist.js
+---------------------------------------------------------------------------------
+var sharedBlacklist = [
+  /node_modules[\/\\]react[\/\\]dist[\/\\].*/,
+  /website\/node_modules\/.*/,
+  /heapCapture\/bundle\.js/,
+  /.*\/__tests__\/.*/
+];
+---------------------------------------------------------------------------------
+
+*** EXPO ***
+Framework ReactJs  Instalar no diretorio que contem back/fron/mob
+yarn global add expo-cli
+
+Criando o Projeto - Escolhendo template: expo-template-blank
+expo init mobile
+
+Iniciando serviço
+yarn start
+
+No celular scanear QRcode.
