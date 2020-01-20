@@ -36,4 +36,8 @@ instalação: yarn add axios
 CORS - Permiter acessar por outro endereço
 instalação: yarn add cors
 
+REALTIME - WebSocket com socket.io
+instalação: yarn add socket.io
+
 MongoDB Compass Communit
+
