@@ -1,0 +1,30 @@
+﻿Parei 1:25 minutos
+
+EXPO - Framework ReactJs - Instalar no diretorio que contem back/fron/mob
+yarn global add expo-cli
+
+Criando o Projeto
+expo init mobile
+
+Escolhendo template: expo-template-blank
+
+Iniciando: yarn start
+
+REACT-NAVIGATION - Utilizando com expo
+instalação: yarn add react-navigation
+expo install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context
+yarn add react-navigation-stack
+yarn add react-native-community/masked-view
+
+
+MAPS - 
+instalação: expo install react-native-maps
+
+LOCALIZACAO
+instalação: expo install expo-location
+
+WEBVIEW
+instalação: expo install react-native-webview
+
+AXIOS - Chamadas API
+instalação: yarn add axios

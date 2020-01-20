@@ -1,0 +1,11 @@
+Parei 1:03 minutos
+
+EXPO - Framework ReactJs - Instalar no diretorio que contem back/fron/mob
+yarn global add expo-cli
+
+Criando o Projeto
+expo init mobile
+
+Escolhendo template: expo-template-blank
+
+Iniciando: yarn start
