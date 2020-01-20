@@ -1,4 +1,4 @@
-﻿Parei 1:25 minutos
+﻿Parei 31 minutos
 
 EXPO - Framework ReactJs - Instalar no diretorio que contem back/fron/mob
 yarn global add expo-cli
@@ -28,3 +28,10 @@ instalação: expo install react-native-webview
 
 AXIOS - Chamadas API
 instalação: yarn add axios
+
+WebSocket client
+instalação: yarn add socke.io-client
+
+----------------------------------
+Comando: npm install expo-cli
+Pasta: C:\Users\matheus.cardoso\AppData\Roaming\npm\node_modules\

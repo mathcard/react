@@ -20,4 +20,4 @@ app.use(cors()); // Permitindo acesso por outro endereço, nesse caso por todos
 app.use(express.json()); // Habilitando json
 app.use(routes); // Habilitando as rotas
 
-app.listen(3333);
+server.listen(3333); // Habilitando websocket

@@ -24,8 +24,13 @@ function Main({ navigation }){
           enableHighAccuracy: true, // Utiliza o GPS
         });
         
+        //Coordenadas manuais
+        //const latitude = -16.6881428;
+        //const longitude = -49.2604738;
+
+        // Coordenadas automaticas
         const { latitude, longitude } = coords;
-   //     console.log(`lat:${latitude}. long:${longitude}`);
+        console.log(`lat:${latitude}. long:${longitude}`);
         setCurrentRegion({
           latitude,
           longitude,
@@ -37,18 +42,15 @@ function Main({ navigation }){
     loadInitialPosition();
   }, []);
 
-  function setupWebsocket(){     
-    console.log('Chamada setup websocket');   
-    /*const { latitude, longitude } = currentRegion;
+  function setupWebsocket(){         
+    const { latitude, longitude } = currentRegion;
     connect(
       latitude,
       longitude,
       techs,
-    ); */
+    ); 
     connect();
   }
-
-
   
   async function loadDevs(){
     const { latitude, longitude} = currentRegion;

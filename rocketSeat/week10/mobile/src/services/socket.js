@@ -1,18 +1,22 @@
 import socketio from 'socket.io-client';
 
-const socket = socketio('http://192.168.15.6:3333', {
+const socket = socketio('http://192.168.0.72:3333', {
   autoConnect: false,
 });
 
-//function connect(latitude, longitude, techs){
-  function connect(){
-  /*socket.io.opts.query = {
+function connect(latitude, longitude, techs){
+//  function connect(){
+  socket.io.opts.query = {
     latitude, 
     longitude, 
     techs,
-  }; */
-  console.log('Chamada socket')
+  };   
   socket.connect();
+
+   //TESTANDO RECEBIMENTO DE MENSAGEM
+  /*socket.on('message', text =>{
+    console.log(text);
+  }) */
 }
 
 function disconnect(){
