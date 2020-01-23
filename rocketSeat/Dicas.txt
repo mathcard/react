@@ -1,6 +1,6 @@
 ﻿
-*********** BACKEND - INICIO ***********
-Pq utilizar NODE.JS? Arquitetura NOBlockIO -> Processa requisição de formas paralelas. 
+********** BACKEND - INICIO ***********
+Por quê utilizar NODE.JS? Arquitetura NOBlockIO -> Processa requisição de formas paralelas. 
 
 Comandos inicias
 - Inician packege.json - Anota as dependencias instaladas na aplicação
