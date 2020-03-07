@@ -1,4 +1,4 @@
-﻿Parei 31 minutos
+﻿
 
 EXPO - Framework ReactJs - Instalar no diretorio que contem back/fron/mob
 yarn global add expo-cli
