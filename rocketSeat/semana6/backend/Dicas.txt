@@ -1,0 +1,165 @@
+﻿Parei Omni Stack 6.0 - video 4 49:00m/60:00 - Terminando de importa as libs
+
+****** FERRAMENTAS NECESSARIAS ***** 
+sdk e java
+Instalar as ferramentas node.js, yarn, npm, chocolatey.
+
+****** Variaveis de ambiente ******
+ANDROID_HOME = C:\Users\matheus.cardoso\AppData\Local\Android\Sdk
+JAVA_HOME = C:\Program Files\Java\jdk1.8.0_211 no trabalho mudei para: C:\Program Files\Java\jre1.8.0_211
+Path = %ANDROID_HOME%\platform-tools;%ANDROID_HOME%\tools;C:\Users\matheus.cardoso\AppData\Roaming\npm;C:\Users\matheus.cardoso\AppData\Local\Yarn\bin
+
+******* ESTRUTURA DO PROJETO ********
+Arquitetura MVC - Model, View, Controller
+COntrollers - Regras de negocio; 
+Models - Abstração das tabelas;
+View - Utilizado nas proximas aulas - React
+
+
+****** Basico do React *********
+Componente: Função isolada de Html, Css ou Js, não interfere no restante da aplicação
+Propriedade: Informações quem componente Pai passa para um filho.
+Estado: Informações mantidas pelo componente. (Imutabilidade).
+
+
+
+*********** BACKEND - INICIO ***********
+Pq utilizar NODE.JS? Arquitetura NOBlockIO -> Processa requisição de formas paralelas. 
+
+Comandos inicias
+- Inician packege.json - Anota as dependencias instaladas na aplicação
+yarn init -y
+
+- EXPRESS - Define as rotas (micro-framework e middleware)
+yarn add express
+
+- Monitora as alteraçõs js e restart o servidor - Criei script no packege.json: yarn dev
+yarn add nodemon -D
+
+- Iniciando node.js - Criei script no packege.json: yarn start
+node src\server.js
+
+- Instalando MONGODB - Abstração do banco de dados
+yarn add mongoose
+
+MONGO ATLAS - Banco de dados Online gmail/#Mathcrack1418
+INSOMNIA - Testa os codigos rest
+HEROKU - Roda aplicação online
+
+- MULTER -  Realizar UPLOAD Crei o arquivo multer.js dentro de config -
+yarn add multer
+
+- Trabalhando com REAL TIME
+yarn add socket.io
+
+- Definindo que acessa a aplicação - CORS
+yarn add cors
+
+Procfile - Arquivo que o heroku utiliza
+
+*********** BACKEND - FIM ***********
+
+*********** FRONTEND ***********
+
+-Criando projeto
+yarn create react-app frontend
+
+-Iniciando ambiente dev - Terminal do VScode
+yarn start
+
+- Instalando axios para consumir api
+yarn add axios
+
+index.js - Chama arquivo App.js e renderiza o que esta no render() para div root no html
+
+- Adicionando as rotas no frondend
+yarn add react-router-dom
+
+- Adicionando Icones
+yarn add react-icons
+
+- Trabalhando com datas
+yarn add date-fns
+
+- Permite arrastar para fazer upload
+yarn add react-dropzone
+
+- Atualizando a visualização de arquivos automaticamente
+yarn add socket.io-client
+
+Adicionando buildpack no heruku: mars/create-react-app
+*********** FRONTEND - END ***********
+********** MOBILE **************
+- Adicionando react-native
+yarn global add react-native-cli 
+
+- Iniciando projeto
+react-native init mobile
+
+- Iniciar emulador
+react-native run-android
+
+- Utilizando navegação
+yarn add react-navigation react-native-gesture-handler
+react-native link react-native-gesture-handler
+react-native run-android
+
+- Abrindo app pela segunda vez
+react-native start 
+
+- Conectando na api
+yarn add axios
+
+- Banco de dados local, armazena info dos users - Precisa linkar
+yarn add @react-native-community/async-storage
+react-native link @react-native-community/async-storage
+
+- Adicionando varios icones - Precisa linkar
+yarn add react-native-vector-icons
+react-native link react-native-vector-icons
+
+- Lidar com arquivos
+yarn add react-native-fs
+react-native link react-native-fs
+
+- Abrir galeria de fotos
+No android, acrescentar linhas: android/app/src/main/AndroidManifest.xml
+<uses-permission android:name="android.permission.CAMERA" />
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+Instalação image picker
+yarn add react-native-image-picker
+react-native link react-native-image-picker
+
+- Abrir arquivos dentro da aplicação
+yarn add react-native-file-viewer
+react-native link react-native-file-viewer
+Copiar a pasta xml /node-modules/react-native-file-viewer/android/src/res
+
+Depois colar isso no android manifest:
+	<provider
+		android:name="com.vinzscam.reactnativefileviewer.FileProvider"
+		android:authorities="${applicationId}.provider"
+		android:exported="false"
+		android:grantUriPermissions="true">
+		<meta-data
+			android:name="android.support.FILE_PROVIDER_PATHS"
+			android:resource="@xml/file_viewer_provider_paths"
+		/>
+	</provider>
+
+- Lib Ajuda a calcular o tamanho dos elementos
+yarn add react-native-iphone-x-helper
+
+- Atualizando automaticamente
+yarn add socket.io
+
+Erro no run-android: Alterar uma variavel em node_modules/metro-config/src/defaults/blacklist.js
+---------------------------------------------------------------------------------
+var sharedBlacklist = [
+  /node_modules[\/\\]react[\/\\]dist[\/\\].*/,
+  /website\/node_modules\/.*/,
+  /heapCapture\/bundle\.js/,
+  /.*\/__tests__\/.*/
+];
+---------------------------------------------------------------------------------
