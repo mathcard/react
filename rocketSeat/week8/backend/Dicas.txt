@@ -12,6 +12,9 @@ instalação: yarn add express
 Nodemon - Reincia servidor automaticamente
 instalação: yarn add nodemon -D
 
+Mongose
+instalação: yarn add mongoose
+
 
 yarn.lock - Cache, armazena as dependencias
 
@@ -19,3 +22,5 @@ yarn.lock - Cache, armazena as dependencias
   /* Pasando parametro na url
   req.query.name;
   return res.send(`Hello World ${req.query.name}`); */
+
+  Continuando estudos
