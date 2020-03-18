@@ -1,4 +1,4 @@
-Parei no video 2 minuto 31
+Parei no video 2 minuto 43
 
 Inicianco projeto
 yarn init -y
