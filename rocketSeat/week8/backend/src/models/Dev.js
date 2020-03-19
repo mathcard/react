@@ -13,6 +13,14 @@ const DevSchema = new Schema({
   type: String,
   required: true,
   },
+  likes: [{
+    type: Schema.Types.ObjectId, // Id do mongo
+    ref: 'Dev',
+  }],
+  dislikes: [{
+    type: Schema.Types.ObjectId, // Id do mongo
+    ref: 'Dev',
+  }],
 },{
   timestamps: true,
 });

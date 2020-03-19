@@ -15,6 +15,11 @@ instalação: yarn add nodemon -D
 Mongose
 instalação: yarn add mongoose
 
+Axios
+instalação: yarn add axios
+
+Cors - Permitir acessar api externo, dever ser chamando antes da rota
+Instalação: yarn add cors
 
 yarn.lock - Cache, armazena as dependencias
 
