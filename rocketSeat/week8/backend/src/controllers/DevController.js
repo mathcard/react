@@ -23,6 +23,13 @@ module.exports = {
     // Info passada para api
     const { username } = req.body; 
 
+    //Verficando se o usuário já existe
+    const userExists = await Dev.findOne({ user: username});
+
+    if(userExists){
+      return res.json(userExists);      
+    }
+
     // Gravando a resposta que será recebida da api
     const response = await axios.get(`https://api.github.com/users/${username}`);
     
