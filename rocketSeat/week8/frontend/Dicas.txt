@@ -1,0 +1,9 @@
+ROTAS
+yarn add react-router-dom
+history: as paginas que serão redirecinadas
+match: busca todos os parametros passados
+
+Chamando API 
+yarn add axios
+
+parei 59minutos
