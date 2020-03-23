@@ -1,0 +1,33 @@
+Parei com 53 minutos
+
+- Iniciando o projeto (Cria apenas o package.json)
+yarn init -y
+
+- Microframework para utilizar com rotas
+yarn add express
+
+- Funcionalidades para o Server Node (-D usado apenas em desenvolvimento)
+yarn add nodemon -D
+
+- Acesso ao banco de dados
+yarn add mongoose
+
+yarn.lock grava o cache de algumas dependências
+
+------------------------------------
+// EXEMPLOS DE ROTAS
+// req.query = Acessar query params (Para filtros)
+app.get('/users', (req, res) => {
+  return res.json({ idade: req.query.idade });
+});
+
+// req.params = Acessar route params (para edição, delete)
+app.put('/users/:id', (req, res) => {
+  return res.json({ id: req.params.id });
+});
+
+// req.body = Acessar corpo da requisção ( inserção )
+app.post('/users/', (req, res) => {
+  return res.json(req.body);
+});
+------------------------------------
