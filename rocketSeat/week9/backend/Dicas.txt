@@ -1,4 +1,4 @@
-Parei com 53 minutos
+Parei com 59:40 minutos
 
 - Iniciando o projeto (Cria apenas o package.json)
 yarn init -y
@@ -11,6 +11,9 @@ yarn add nodemon -D
 
 - Acesso ao banco de dados
 yarn add mongoose
+
+- Envio de arquivos ao Servidor (express não reconhece multi )
+yarn add multer
 
 yarn.lock grava o cache de algumas dependências
 
