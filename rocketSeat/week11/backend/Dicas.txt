@@ -1,2 +1,46 @@
+Parada: 1h:17m
+
 - Instalação Rotas
 yarn add express
+
+- Reinicialização do servidor automatica
+yarn add nodemon
+
+- Banco de dados - SQlite utilizando knex para usar JS
+Insalação: npm install knex 
+Instalação: npm install sqlite3
+
+
+Iniciando knex: npx knex init
+Criando migration: npx knex migrate:make create_ongs
+Criando table: npx knex migrate:latest
+
+Outras migrations e tables:
+npx knex migrate:make create_incidents
+npx knex migrate:latest
+
+Refazer ultima migrate: npx knex migrate:rollback
+Listar todas migrations: npx knex migrate:status
+
+Tive que excluir o db.sqlite e rodar o migrate:latest
+
+- CORS - Camada de segurança define quem pode acessar as rotas
+yarn add cors
+
+/*  Métodos HTTP
+GET: Busca info no backend
+POST: Criar uma info no backend
+PUT: Alterar uma info no backend
+DELETE: Deletar info no backend
+
+Tipos de Parâmetros
+QUERY PARAMS: Parametros enviaods na rota após "?" (Filtro, Paginação)
+ROUTE PARAMS: Parâmetros  utilizados para identificar recursos
+REQUEST BODY: Corpo da requisição, utilizados para criar 
+
+*/
+
+/*
+ Driver: SELECT * FROM users
+ Query Builder: table('users').select('*').where()
+*/
