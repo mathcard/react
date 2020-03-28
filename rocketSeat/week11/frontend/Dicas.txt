@@ -1,0 +1,10 @@
+Parei 1h 30m minutos
+
+- Icones
+yarn add react-icons
+
+- Rotas
+yarn add react-router-dom
+
+- Cliente Http - axios
+yarn add axios
