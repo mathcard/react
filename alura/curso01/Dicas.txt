@@ -1,3 +1,0 @@
-Jar: http://bit.ly/jar-api-curso-react 
-Api: http://cdc-react.herokuapp.com/api/autores
-	https://github.com/alberto-alura/cdcadmin-api
