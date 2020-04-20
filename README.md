@@ -1,4 +1,4 @@
-# reactNative
+# Projetos da semana OmniStack
 
 Implementação dos projetos Omnistack da RocketSeat. Apredendo as tecnologias web com ReactJs, mobile com React Native e backend com NodeJs.
 
