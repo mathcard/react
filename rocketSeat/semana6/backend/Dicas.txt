@@ -1,6 +1,4 @@
-﻿Parei Omni Stack 6.0 - video 4 49:00m/60:00 - Terminando de importa as libs
-
-****** FERRAMENTAS NECESSARIAS ***** 
+﻿****** FERRAMENTAS NECESSARIAS ***** 
 sdk e java
 Instalar as ferramentas node.js, yarn, npm, chocolatey.
 
@@ -41,10 +39,6 @@ node src\server.js
 
 - Instalando MONGODB - Abstração do banco de dados
 yarn add mongoose
-
-MONGO ATLAS - Banco de dados Online gmail/#Mathcrack1418
-INSOMNIA - Testa os codigos rest
-HEROKU - Roda aplicação online
 
 - MULTER -  Realizar UPLOAD Crei o arquivo multer.js dentro de config -
 yarn add multer

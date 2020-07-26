@@ -14,6 +14,3 @@ instalação: yarn add axios
 
 - SOCKET.IO - Frontend real time
 yarn add socket.io-client
-
-
-Deu problema no comando react-scripts, tive que copiar o node-modules

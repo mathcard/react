@@ -28,11 +28,8 @@ Instalação: yarn add react-native-stack
 Confere o blacklist
 Resetar cache: react-native start --reset-cache
 
-
 AXIOS - requisição para api
 instalação: yarn add axios
-Emulador usa localhost, USB ip 
-
 
 SOCKET.IO -  Colocando em Real Time
 instalação: yarn add socket.io-client
@@ -46,10 +43,7 @@ ANDROID: android/app/src/main/AndroidManifest.xml
 <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
 
-
-
 OCULTANDO WARNINGS - Exemplos no arquivo index.js
-
 
 Erro no run-android: Alterar uma variavel em node_modules/metro-config/src/defaults/blacklist.js
 ---------------------------------------------------------------------------------
@@ -61,5 +55,3 @@ var sharedBlacklist = [
 ];
 ---------------------------------------------------------------------------------
 
-
-C:\reactNative\rocketSeat\week7\instarocket\android\app\src\main\java\com\instarocket

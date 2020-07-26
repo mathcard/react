@@ -19,7 +19,7 @@ io.on('connection', socket => {
 });
 
 // Conectando no mongo
-mongoose.connect('mongodb+srv://omnistack:omnistack@cluster0-bakma.mongodb.net/test?retryWrites=true&w=majority', {
+mongoose.connect('Colocar endereçoo do mongo', {
     useNewUrlParser: true,
 });
 

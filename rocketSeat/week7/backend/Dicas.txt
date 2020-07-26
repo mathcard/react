@@ -18,7 +18,6 @@ yarn add nodemon
 
 MONGOOSE
 Instalação: yarn add mongoose
-Connect: mongodb+srv://omnistack:<password>@cluster0-bakma.mongodb.net/test?retryWrites=true&w=majority
 Usuário: week7/week7
 Network Access: Permite todos
 

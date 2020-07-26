@@ -4,7 +4,7 @@ const cors = require('cors');
 const routes = require('./routes');
 const server = express();
 
-mongoose.connect('mongodb+srv://week8:week8@cluster0-bakma.mongodb.net/week8?retryWrites=true&w=majority' , { 
+mongoose.connect('Colocar endereço do mongo' , { 
 	useNewUrlParser: true,
 	useUnifiedTopology: true,
 });
